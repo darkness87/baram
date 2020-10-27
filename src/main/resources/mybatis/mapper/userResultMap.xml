@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.darka.baram.mapper.UserMapper">
+	<resultMap id="userMap" type="com.darka.baram.vo.UserVO">
+		<result property="userId" column="USER_ID"/>
+		<result property="userName" column="USER_NAME"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="userClass" column="USER_CLASS"/>
+		<result property="createDate" column="CREATE_DATE"/>
+		<result property="destroyDate" column="DESTROY_DATE"/>
+		<result property="base_score" column="BASE_SCORE"/>
+		<result property="level" column="USER_LEVEL"/>
+		<result property="userStatus" column="USER_STATUS"/>
+	</resultMap>
+</mapper>

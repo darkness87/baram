@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.darka.baram.mapper.UserMapper">
+	<sql id="User-COLUMNS">
+		user_id, user_name, password, user_class, create_date
+		, destroy_date, base_score, user_level, user_status
+	</sql>
+	<select id="selectUserList" parameterType="HashMap" resultMap="userMap">
+		SELECT * FROM br_user
+	</select>
+	<insert id="insertUser">
+		INSERT INTO user_info (<include refid="User-COLUMNS"/>)
+		VALUES
+		(
+			#{userId}, #{userName}, #{password}, #{userClass}, #{createDate}
+			, #{destroyDate}, #{base_score}, #{level}, #{status}
+		)
+	</insert>
+	<update id="updateDestroyDate" parameterType="HashMap">
+		UPDATE br_user
+		   SET destroy_date = #{destroyDate}
+		 WHERE UID = #{userId}
+	</update>
+	<update id="updateUserLevel" parameterType="HashMap">
+		UPDATE br_user
+		   SET user_level = #{level}
+		 WHERE UID = #{userId}
+	</update>
+</mapper>
