@@ -174,7 +174,7 @@ export let blueChartOptions = {
 };
 
 export let lineChartOptionsBlue = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -222,7 +222,7 @@ export let lineChartOptionsBlue = {
 };
 
 export let barChartOptionsGradient = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -268,7 +268,7 @@ export let barChartOptionsGradient = {
 };
 
 export let pieChartOptions = {
-  ...basicOptions,
+  basicOptions,
   cutoutPercentage: 70,
   tooltips: {
     backgroundColor: '#f5f5f5',
@@ -314,7 +314,7 @@ export let pieChartOptions = {
 };
 
 export let purpleChartOptions = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -361,7 +361,7 @@ export let purpleChartOptions = {
 };
 
 export let orangeChartOptions = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -407,7 +407,7 @@ export let orangeChartOptions = {
   }
 };
 export let greenChartOptions = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -454,7 +454,7 @@ export let greenChartOptions = {
 };
 
 export let barChartOptions = {
-  ...basicOptions,
+  basicOptions,
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
