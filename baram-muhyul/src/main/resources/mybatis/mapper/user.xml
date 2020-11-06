@@ -10,7 +10,7 @@
 		SELECT * FROM br_user
 	</select>
 	<insert id="insertUser">
-		INSERT INTO user_info (<include refid="User-COLUMNS"/>)
+		INSERT INTO br_user (<include refid="User-COLUMNS"/>)
 		VALUES
 		(
 			#{userId}, #{userName}, #{password}, #{userClass}, #{createDate}
@@ -20,11 +20,11 @@
 	<update id="updateDestroyDate" parameterType="HashMap">
 		UPDATE br_user
 		   SET destroy_date = #{destroyDate}
-		 WHERE UID = #{userId}
+		 WHERE user_name = #{userName}
 	</update>
 	<update id="updateUserLevel" parameterType="HashMap">
 		UPDATE br_user
 		   SET user_level = #{level}
-		 WHERE UID = #{userId}
+		 WHERE user_name = #{userName}
 	</update>
 </mapper>

@@ -10,4 +10,5 @@ import com.darka.baram.vo.UserVO;
 public interface UserMapper {
 	public List<UserVO> selectUserList() throws Exception;
 	public int selectUserCount();
+	public int updateUserLevel(UserVO userVO);
 }

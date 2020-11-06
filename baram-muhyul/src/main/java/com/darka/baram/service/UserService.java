@@ -17,7 +17,12 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-	public List<UserVO> getUserInfo() {
+	public void addUser(String userName) {
+		UserVO userVO = new UserVO("테스트1");
+		
+	}
+
+	public List<UserVO> getUserList() {
 		try {
 			return userMapper.selectUserList();
 		} catch (Exception e) {

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.darka.baram.mapper.ScoreMapper">
+	<sql id="Score-COLUMNS">
+		user_name, base_date, score
+	</sql>
+
+	<insert id="insertUserScore">
+		INSERT INTO br_user_score (<include refid="Score-COLUMNS"/>)
+		VALUES
+		(
+			#{userName}, #{baseDate}, #{score}
+		)
+	</insert>
+
+	<select id="selectScore" parameterType="HashMap" resultMap="scoreMap">
+		SELECT * FROM br_user_score
+		 WHERE user_name = #{userName}
+		   AND base_date = #{baseDate}
+	</select>
+
+	<select id="selectScoreListByName" parameterType="HashMap" resultMap="scoreMap">
+		SELECT * FROM br_user_score
+		 WHERE user_name = #{userName}
+	</select>
+
+	<select id="selectScoreListByDate" parameterType="HashMap" resultMap="scoreMap">
+		SELECT * FROM br_user_score
+		 WHERE base_date = #{baseDate}
+	</select>
+</mapper>

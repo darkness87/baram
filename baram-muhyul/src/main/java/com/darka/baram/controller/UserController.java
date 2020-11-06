@@ -16,12 +16,11 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
-	
-	
+
+
 	@GetMapping("/user.do")
 	@ResponseBody public List<UserVO> mypage() {
-		List<UserVO> userList = userService.getUserInfo();
-		System.out.println(userService.getUserInfo());
+		List<UserVO> userList = userService.getUserList();
 
 		return userList;
 	}
