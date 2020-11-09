@@ -9,7 +9,7 @@
 		<result property="userClass" column="USER_CLASS"/>
 		<result property="createDate" column="CREATE_DATE"/>
 		<result property="destroyDate" column="DESTROY_DATE"/>
-		<result property="base_score" column="BASE_SCORE"/>
+		<result property="baseScore" column="BASE_SCORE"/>
 		<result property="level" column="USER_LEVEL"/>
 		<result property="userStatus" column="USER_STATUS"/>
 	</resultMap>

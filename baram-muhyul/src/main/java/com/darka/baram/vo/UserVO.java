@@ -3,6 +3,7 @@ package com.darka.baram.vo;
 import java.util.Date;
 
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,16 +11,17 @@ import lombok.extern.slf4j.Slf4j;
 @Getter @Setter
 public class UserVO {
 	private String userId;
+	@NonNull
 	private String userName;
 	private String password;
 	private String userClass;
 	private Date createDate;
 	private Date destroyDate;
-	private int base_score;
+	private int baseScore;
 	private int level;
 	private boolean status;
 
-	public UserVO(String userName) {
+	public UserVO(String userName, String userClass) {
 		this(userName, "전사", 0);
 
 		this.userId = getUniqueID(this.createDate);
@@ -31,11 +33,16 @@ public class UserVO {
 		this.userClass = userClass;
 		this.createDate = new Date();
 		this.destroyDate = null;
-		this.base_score = 0;
+		this.baseScore = 0;
 		this.level = level;
 		this.status = true;
 
 		this.userId = getUniqueID(this.createDate);
+	}
+
+	public UserVO(String userName, int level) {
+		this.userName = userName;
+		this.level = level;
 	}
 
 	public void setUserStatus(String userStatus) {
