@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.URI;
 import java.nio.file.Files;
 
 import org.junit.jupiter.api.Test;
@@ -15,12 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @SpringBootTest
 class BaramMuhyulApplicationTests {
 
@@ -40,18 +33,18 @@ class BaramMuhyulApplicationTests {
 				sb.append(line);
 			}
 
-			Resource r = resourceLoader.getResource("classpath:data/reference_dev.record");
-			URI uri = r.getURI();
-			log.info("{}", uri.getPath());
-			File file = r.getFile();
-			if (file.exists()) {
-				file.createNewFile();
-			}
-			copyInputStreamToFile(resource.getInputStream(), file);
-			log.info("{}", sb.toString());
-			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			String prettyJsonString = gson.toJson(sb.toString());
-			log.info("{}", prettyJsonString);
+//			Resource r = resourceLoader.getResource("classpath:data/reference_dev.record");
+//			URI uri = r.getURI();
+//			log.info("{}", uri.getPath());
+//			File file = r.getFile();
+//			if (file.exists()) {
+//				file.createNewFile();
+//			}
+//			copyInputStreamToFile(resource.getInputStream(), file);
+//			log.info("{}", sb.toString());
+//			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//			String prettyJsonString = gson.toJson(sb.toString());
+//			log.info("{}", prettyJsonString);
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,7 +54,7 @@ class BaramMuhyulApplicationTests {
 		}
 	}
 
-	private static void copyInputStreamToFile(InputStream inputStream, File file) throws IOException {
+	public static void copyInputStreamToFile(InputStream inputStream, File file) throws IOException {
 		Files.copy(inputStream, file.toPath());
 	}
 
