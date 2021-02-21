@@ -2,66 +2,30 @@ package com.darka.baram.vo;
 
 import java.util.Date;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Slf4j
-@Getter @Setter
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity(name="BR_USER")
 public class UserVO {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String userId;
-	@NonNull
 	private String userName;
 	private String password;
 	private String userClass;
 	private Date createDate;
 	private Date destroyDate;
 	private int baseScore;
-	private int level;
-	private boolean status;
-
-	public UserVO(String userName, String userClass) {
-		this(userName, "전사", 0);
-
-		this.userId = getUniqueID(this.createDate);
-	}
-
-	public UserVO(String userName, String userClass, int level) {
-		this.userName = userName;
-		this.password = "1";
-		this.userClass = userClass;
-		this.createDate = new Date();
-		this.destroyDate = null;
-		this.baseScore = 0;
-		this.level = level;
-		this.status = true;
-
-		this.userId = getUniqueID(this.createDate);
-	}
-
-	public UserVO(String userName, int level) {
-		this.userName = userName;
-		this.level = level;
-	}
-
-	public void setUserStatus(String userStatus) {
-		status = Boolean.parseBoolean(userStatus);
-	}
-
-	private static String getUniqueID(Date date) {
-		return getUniqueID(date.getTime());
-	}
-
-	private static synchronized String getUniqueID(long date) {
-		String keyID = Long.toString(date, 36);
-
-		try {
-			Thread.sleep(1);
-		} catch(InterruptedException ine) {
-			log.debug(ine.getMessage());
-		}
-
-		return keyID;
-	}
+	private int userLevel;
+	private boolean userStatus;
 }
