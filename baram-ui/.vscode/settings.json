@@ -1,0 +1,43 @@
+{
+	"vetur.format.options.useTabs": true,
+	"vetur.experimental.templateInterpolationService": false,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.autoIndent": "advanced",
+	"editor.codeActionsOnSave": {
+		// For ESLint
+		"source.fixAll.eslint": true
+	},
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.formatOnSave": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.formatOnType": true,
+	"editor.tabSize": 4,
+	"eslint.validate": [
+		"vue",
+		"javascript"
+	],
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[scss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"git.ignoreLimitWarning": true
+}
