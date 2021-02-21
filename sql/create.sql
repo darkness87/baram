@@ -113,6 +113,8 @@ INSERT INTO BR_USER VALUES ('83', '닭살애교', '1', '전사', SYSTIMESTAMP, null, 0
 INSERT INTO BR_USER VALUES ('84', '최이찬', '1', '도사', SYSTIMESTAMP, null, 0, 375, 'true');
 INSERT INTO BR_USER VALUES ('85', '술쨔응', '1', '주술', SYSTIMESTAMP, null, 0, 403, 'true');
 INSERT INTO BR_USER VALUES ('86', '한나랑', '1', '도적', SYSTIMESTAMP, null, 0, 396, 'true');
+INSERT INTO BR_USER VALUES ('87', '금호', '1', '주술', SYSTIMESTAMP, null, 0, 488, 'true');
+INSERT INTO BR_USER VALUES ('88', '요호', '1', '도사', SYSTIMESTAMP, null, 0, 489, 'true');
 
 
 UPDATE br_user SET base_score=30757 where user_name='닭아야옹해바';
@@ -197,6 +199,8 @@ UPDATE br_user SET base_score=0 where user_name='닭살애교';
 UPDATE br_user SET base_score=0 where user_name='최이찬';
 UPDATE br_user SET base_score=0 where user_name='술쨔응';
 UPDATE br_user SET base_score=0 where user_name='한나랑';
+UPDATE br_user SET base_score=0 where user_name='금호';
+UPDATE br_user SET base_score=0 where user_name='요호';
 
 UPDATE br_user SET create_date=to_timestamp('2020-07-15', 'yyyy-mm-dd') where user_name='닭아야옹해바';
 UPDATE br_user SET create_date=to_timestamp('2020-07-15', 'yyyy-mm-dd') where user_name='유웅';
@@ -282,6 +286,8 @@ UPDATE br_user SET create_date=to_timestamp('2021-2-9', 'yyyy-mm-dd') where user
 UPDATE br_user SET create_date=to_timestamp('2021-2-9', 'yyyy-mm-dd') where user_name='최이찬';
 UPDATE br_user SET create_date=to_timestamp('2021-2-9', 'yyyy-mm-dd') where user_name='술쨔응';
 UPDATE br_user SET create_date=to_timestamp('2021-2-19', 'yyyy-mm-dd') where user_name='한나랑';
+UPDATE br_user SET create_date=to_timestamp('2021-2-21', 'yyyy-mm-dd') where user_name='금호';
+UPDATE br_user SET create_date=to_timestamp('2021-2-21', 'yyyy-mm-dd') where user_name='요호';
 commit;
 
 UPDATE br_user SET create_date=to_timestamp('2020-10-31', 'yyyy-mm-dd'), user_status='false' where user_name='하잇하잇';
