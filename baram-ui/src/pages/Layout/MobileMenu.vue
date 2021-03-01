@@ -9,10 +9,10 @@
 		<li>
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				<i class="material-icons">dashboard</i>
-				<p>Dashboard</p></a
-			>
+				<p>Dashboard</p>
+			</a>
 		</li>
-		<li>
+		<!-- <li>
 			<drop-down>
 				<a slot="title" class="dropdown-toggle" data-toggle="dropdown">
 					<i class="material-icons">notifications</i>
@@ -27,7 +27,7 @@
 					<li><a href="#">Another One</a></li>
 				</ul>
 			</drop-down>
-		</li>
+		</li> -->
 		<li>
 			<a href="#" data-toggle="dropdown" class="dropdown-toggle"
 				><i class="material-icons">person</i>

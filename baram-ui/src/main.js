@@ -20,6 +20,7 @@ import App from "./App";
 
 // router setup
 import routes from "./routes/routes";
+import store from "@/store";
 
 // Plugins
 import GlobalComponents from "./globalComponents";
@@ -50,6 +51,7 @@ new Vue({
 	el: "#app",
 	render: h => h(App),
 	router,
+	store,
 	data: {
 		Chartist: Chartist
 	}

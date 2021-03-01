@@ -25,10 +25,10 @@ export default {
 			selected: [],
 			users: [
 				{
-					name: "Dakota Rice",
-					salary: "$36,738",
-					country: "Niger",
-					city: "Oud-Turnhout"
+					name: "닭아야옹해바",
+					salary: "$495",
+					country: "검제",
+					city: "2072"
 				},
 				{
 					name: "Minerva Hooper",

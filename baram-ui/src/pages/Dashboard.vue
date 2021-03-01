@@ -1,69 +1,6 @@
 <template>
 	<div class="content">
 		<div class="md-layout">
-			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-				<chart-card :chart-data="dailySalesChart.data" :chart-options="dailySalesChart.options" :chart-type="'Line'" data-background-color="blue">
-					<template slot="content">
-						<h4 class="title">Daily Sales</h4>
-						<p class="category">
-							<span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> 55% </span>
-							increase in today sales.
-						</p>
-					</template>
-
-					<template slot="footer">
-						<div class="stats">
-							<md-icon>access_time</md-icon>
-							updated 4 minutes ago
-						</div>
-					</template>
-				</chart-card>
-			</div>
-			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-				<chart-card
-					:chart-data="emailsSubscriptionChart.data"
-					:chart-options="emailsSubscriptionChart.options"
-					:chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
-					:chart-type="'Bar'"
-					data-background-color="red"
-				>
-					<template slot="content">
-						<h4 class="title">Email Subscription</h4>
-						<p class="category">
-							Last Campaign Performance
-						</p>
-					</template>
-
-					<template slot="footer">
-						<div class="stats">
-							<md-icon>access_time</md-icon>
-							updated 10 days ago
-						</div>
-					</template>
-				</chart-card>
-			</div>
-			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
-				<chart-card
-					:chart-data="dataCompletedTasksChart.data"
-					:chart-options="dataCompletedTasksChart.options"
-					:chart-type="'Line'"
-					data-background-color="green"
-				>
-					<template slot="content">
-						<h4 class="title">Completed Tasks</h4>
-						<p class="category">
-							Last Campaign Performance
-						</p>
-					</template>
-
-					<template slot="footer">
-						<div class="stats">
-							<md-icon>access_time</md-icon>
-							campaign sent 26 minutes ago
-						</div>
-					</template>
-				</chart-card>
-			</div>
 			<div class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25">
 				<stats-card data-background-color="green">
 					<template slot="header">
@@ -71,14 +8,14 @@
 					</template>
 
 					<template slot="content">
-						<p class="category">Revenue</p>
-						<h3 class="title">$34,245</h3>
+						<p class="category">문파 총원</p>
+						<h3 class="title"><span>43</span>/45</h3>
 					</template>
 
 					<template slot="footer">
 						<div class="stats">
-							<md-icon>date_range</md-icon>
-							Last 24 Hours
+							<md-icon class="text-danger">warning</md-icon>
+							<a href="#pablo">문파원 공간확보필요</a>
 						</div>
 					</template>
 				</stats-card>
@@ -90,17 +27,17 @@
 					</template>
 
 					<template slot="content">
-						<p class="category">Used Space</p>
+						<p class="category">문파랭킹</p>
 						<h3 class="title">
-							49/50
-							<small>GB</small>
+							103
+							<small>위</small>
 						</h3>
 					</template>
 
 					<template slot="footer">
 						<div class="stats">
-							<md-icon class="text-danger">warning</md-icon>
-							<a href="#pablo">Get More Space...</a>
+							<md-icon>date_range</md-icon>
+							매일 집계
 						</div>
 					</template>
 				</stats-card>
@@ -112,14 +49,14 @@
 					</template>
 
 					<template slot="content">
-						<p class="category">Fixed Issues</p>
-						<h3 class="title">75</h3>
+						<p class="category">총 경험치</p>
+						<h3 class="title">546,585</h3>
 					</template>
 
 					<template slot="footer">
 						<div class="stats">
 							<md-icon>local_offer</md-icon>
-							Tracked from Github
+							레벨업 경험치 : 576,000
 						</div>
 					</template>
 				</stats-card>
@@ -131,23 +68,91 @@
 					</template>
 
 					<template slot="content">
-						<p class="category">Folowers</p>
-						<h3 class="title">+245</h3>
+						<p class="category">금주 기여도</p>
+						<h3 class="title">39,317</h3>
 					</template>
 
 					<template slot="footer">
 						<div class="stats">
 							<md-icon>update</md-icon>
-							Just Updated
+							매일 0시 집계
 						</div>
 					</template>
 				</stats-card>
 			</div>
+			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
+				<chart-card
+					:chart-data="$store.state.dailySalesChart.data"
+					:chart-options="dailySalesChart.options"
+					:chart-type="'Line'"
+					data-background-color="blue"
+				>
+					<template slot="content">
+						<h4 class="title">총기여도</h4>
+						<p class="category">
+							<span class="text-success"><i class="fas fa-long-arrow-alt-up"></i> 3.78% </span>
+							지난주 대비 상승하였습니다.
+						</p>
+					</template>
+
+					<template slot="footer">
+						<div class="stats">
+							<md-icon>access_time</md-icon>
+							자정 집계 기준
+						</div>
+					</template>
+				</chart-card>
+			</div>
+			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
+				<chart-card
+					:chart-data="$store.state.emailsSubscriptionChart.data"
+					:chart-options="emailsSubscriptionChart.options"
+					:chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
+					:chart-type="'Bar'"
+					data-background-color="red"
+				>
+					<template slot="content">
+						<h4 class="title">주간 기여도 순위</h4>
+						<p class="category">
+							한 주간 가장 많이 기여도를 한 10인
+						</p>
+					</template>
+
+					<template slot="footer">
+						<div class="stats">
+							<md-icon>access_time</md-icon>
+							자정 집계 기준
+						</div>
+					</template>
+				</chart-card>
+			</div>
+			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33">
+				<chart-card
+					:chart-data="$store.state.dataCompletedTasksChart.data"
+					:chart-options="dataCompletedTasksChart.options"
+					:chart-type="'Line'"
+					data-background-color="green"
+				>
+					<template slot="content">
+						<h4 class="title">레벨업 순위</h4>
+						<p class="category">
+							지난 주 대비 가장 많이 상승한 유저
+						</p>
+					</template>
+
+					<template slot="footer">
+						<div class="stats">
+							<md-icon>access_time</md-icon>
+							자정 집계 기준
+						</div>
+					</template>
+				</chart-card>
+			</div>
 			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
 				<md-card>
 					<md-card-header data-background-color="orange">
-						<h4 class="title">Employees Stats</h4>
-						<p class="category">New employees on 15th September, 2016</p>
+						<h4 class="title">레벨 순위</h4>
+						<p class="category">2021-03-01 레벨업 순위 목록</p>
 					</md-card-header>
 					<md-card-content>
 						<ordered-table table-header-color="orange"></ordered-table>
@@ -157,7 +162,7 @@
 			<div class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50">
 				<nav-tabs-card>
 					<template slot="content">
-						<span class="md-nav-tabs-title">Tasks:</span>
+						<span class="md-nav-tabs-title">할일:</span>
 						<md-tabs class="md-success" md-alignment="left">
 							<md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
 								<nav-tabs-table></nav-tabs-table>
@@ -192,10 +197,6 @@ export default {
 	data() {
 		return {
 			dailySalesChart: {
-				data: {
-					labels: ["M", "T", "W", "T", "F", "S", "S"],
-					series: [[12, 17, 7, 17, 23, 18, 38]]
-				},
 				options: {
 					lineSmooth: this.$Chartist.Interpolation.cardinal({
 						tension: 0
@@ -211,11 +212,6 @@ export default {
 				}
 			},
 			dataCompletedTasksChart: {
-				data: {
-					labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-					series: [[230, 750, 450, 300, 280, 240, 200, 190]]
-				},
-
 				options: {
 					lineSmooth: this.$Chartist.Interpolation.cardinal({
 						tension: 0

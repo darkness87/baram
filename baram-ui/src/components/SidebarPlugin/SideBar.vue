@@ -7,7 +7,7 @@
 				</div>
 			</a>
 
-			<a href="https://www.creative-tim.com/product/vue-material-dashboard" target="_blank" class="simple-text logo-normal">
+			<a href="/dashboard" target="_blank" class="simple-text logo-normal">
 				{{ title }}
 			</a>
 		</div>
@@ -32,7 +32,7 @@ export default {
 	props: {
 		title: {
 			type: String,
-			default: "Vue MD"
+			default: "무휼 풀잎 기록보관소"
 		},
 		sidebarBackgroundImage: {
 			type: String,
@@ -40,7 +40,7 @@ export default {
 		},
 		imgLogo: {
 			type: String,
-			default: require("@/assets/img/vue-logo.png")
+			default: require("@/assets/img/baram_logo.jpg")
 		},
 		sidebarItemColor: {
 			type: String,

@@ -26,13 +26,13 @@ export default {
 			selected: [],
 			users: [
 				{
-					name: 'Sign contract for "What are conference organizers afraid of?"'
+					name: "문주가 가장 잘생김"
 				},
 				{
-					name: "Lines From Great Russian Literature? Or E-mails From My Boss?"
+					name: "유웅이 바보다"
 				},
 				{
-					name: "Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit"
+					name: "팬다는 봇성 망가졌다."
 				}
 			]
 		};

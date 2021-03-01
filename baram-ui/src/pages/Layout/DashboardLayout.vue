@@ -22,7 +22,7 @@
 			</sidebar-link>
 			<sidebar-link to="/notifications">
 				<md-icon>notifications</md-icon>
-				<p>Notifications</p>
+				<p>알림테스트</p>
 			</sidebar-link>
 			<sidebar-link to="/icons" class="active-pro">
 				<md-icon>unarchive</md-icon>
