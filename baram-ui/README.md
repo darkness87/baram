@@ -9,9 +9,9 @@
 ---
 
 ## 1. Git 사용법
-- URL 접속 : [AMIweb](https://github.com/darkness87/AMIWeb)
+- URL 접속 : [AMIweb](http://git.prubee.com/baram/ui)
   ```diff
-  !  GIT 저장소 : https://github.com/darkness87/AMIWeb.git
+  !  GIT 저장소 : http://git.prubee.com:18080/baram/ui.git
   ※ GIT 사용방식은 각종 플러그인이나 Tortoise GIT 그리고 기타 프로그램을 자유롭게 사용한다.
   필자는 Tortoise Git 사용함
   ```
@@ -97,8 +97,22 @@
 	},
   }
   ```
+  위 설정들이 마쳐지면 자동 저장 시 자동코드 보정이 일어나야하지만 vscode에선 이 기능을 수동으로 활성화 시켜줘야한다.   
+  일반적으로 키는 방법은 확인되지 않았고 파란색 오류코드라고 보이는 흔적을 발견하여 클릭하면 아래와 같이 활성화 시켜주는 창이 보여진다.
+  ![image](https://user-images.githubusercontent.com/20449373/108644696-7abcca80-74f3-11eb-98a7-1e29ee77c7bb.png)
+  이 때 **'Allow Everywhere'**을 눌러 항시 활성화를 시켜주자.
+ 
   정상적으로 수행이 마쳐지면 코딩 수행시 (저장, 붙여넣기) 자동 formatting이 이루어 지며 개발 패턴을 통일화가 가능해진다.
   ![dev1](https://user-images.githubusercontent.com/20449373/108466522-1d443600-72c7-11eb-9b4b-9ac93cf38bec.gif)
+
+## 3. 커밋 요령
+
+- 선커밋우선   
+  개발자들간의 같은 파일을 여럿이 커밋해야하는 경우가 있다. 이때 수정 진행중인 사항이 있으면 선커밋을 진행한 개발자의 우선 존중을 해주어야하며, 후속 커밋자들은 파일에 맞게 오류 없이 코드를 진행하여야만 한다.
+
+- 커밋하는 방법   
+  커밋할때는 반드시 이슈번호가(#xx) 존재해야하며 이슈번호가 최상단에 반드시 먼저 기록한뒤에 작성하도록 한다. 내용은 가급적 상세하게 작성되어야 하며 오류가 없는 코드만 커밋되어야만 한다. 그러나, 부득이하게 오류상태로 선커밋을 진행해야하는 경우 내용에다가 꼭 기재하여 개발자들간의 혼선을 빚지 않도록 유도해줘야한다. (결론은 선커밋이 승자다.)
+  ![dev2](https://user-images.githubusercontent.com/20449373/108690765-12470b00-753e-11eb-808b-9d251d7f014e.gif)
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
